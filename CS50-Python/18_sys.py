@@ -38,7 +38,7 @@ else:
 
 
 # USing sys.exit() to exit the program
-
+"""
 import sys
 
 if len(sys.argv) < 2:
@@ -47,3 +47,15 @@ elif len(sys.argv) > 2:
     sys.exit("Too many arguments. Type in just your first name to continue.")
 
 print("Hello, My name is", sys.argv[1])
+"""
+
+
+# To make the program more dynamic by giving an option to have unlimited number if command line arguments
+
+import sys
+
+if len(sys.argv) < 2:
+    sys.exit("Too less arguments, Enter the name or names to continue") 
+
+for arg in sys.argv[1:]:
+    print(arg)
